@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text="Información del Estudiante" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <HBox spacing="20">
+        <VBox>
+            <Label text="Nombre:" />
+            <Label fx:id="lblNombre" style="-fx-font-weight: bold;" />
+        </VBox>
+
+        <VBox>
+            <Label text="ID:" />
+            <Label fx:id="lblID" style="-fx-font-weight: bold;" />
+        </VBox>
+    </HBox>
+
+    <Label text="Notas" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+
+    <TableView fx:id="tableNotas" prefHeight="300" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Materia" prefWidth="150" />
+            <TableColumn text="Nota" prefWidth="100" />
+        </columns>
+    </TableView>
+</VBox>

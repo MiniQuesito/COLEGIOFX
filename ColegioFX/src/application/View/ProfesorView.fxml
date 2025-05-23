@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text="Gestión de Notas - Profesor" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <HBox spacing="10">
+        <Label text="Buscar Estudiante:" />
+        <TextField fx:id="txtBuscar" promptText="Nombre o ID" HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <TableView fx:id="tableEstudiantes" prefHeight="300" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="ID" prefWidth="50" />
+            <TableColumn text="Nombre" prefWidth="150" />
+            <TableColumn text="Nota" prefWidth="100" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <Button text="Agregar Nota" fx:id="btnAgregarNota" />
+        <Button text="Modificar Nota" fx:id="btnModificarNota" />
+        <Button text="Eliminar Nota" fx:id="btnEliminarNota" />
+    </HBox>
+</VBox>
