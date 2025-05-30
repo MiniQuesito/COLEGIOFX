@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.ConsultaNotasController"
+            prefWidth="600" prefHeight="400">
+    <top>
+        <VBox alignment="CENTER" spacing="10" BorderPane.alignment="CENTER">
+            <Label text="Mis Notas" style="-fx-font-size: 20px; -fx-padding: 10px;" />
+            <Label fx:id="lblNombreEstudiante" style="-fx-font-size: 16px; -fx-padding: 5px;" />
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <padding><Insets all="20"/></padding> <TableView fx:id="tableNotasEstudiante" prefWidth="550" prefHeight="250">
+                <columns>
+                    <TableColumn fx:id="colMateriaConsulta" text="Materia" prefWidth="300" />
+                    <TableColumn fx:id="colNotaConsulta" text="Nota" prefWidth="150" />
+                    </columns>
+            </TableView>
+        </VBox>
+    </center>
+    <bottom>
+        <Button text="Volver al Login" onAction="#handleVolverAlLogin" BorderPane.alignment="CENTER" style="-fx-padding: 10px;" />
+    </bottom>
+</BorderPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller.NotasController"
+ prefWidth="800" prefHeight="600">
+    <top>
+        <Label text="Gestión de Notas del Profesor" style="-fx-font-size: 20px; -fx-padding: 10px;" BorderPane.alignment="CENTER" />
+    </top>
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+      <stylesheets>
+		 <URL value="@styles.css" />
+	  </stylesheets>
+            <TableView fx:id="tableNotas" prefWidth="750">
+                <columns>
+                    <TableColumn fx:id="colIdEstudiante" text="ID Estudiante" prefWidth="100" />
+                    <TableColumn fx:id="colNombreEstudiante" text="Nombre Estudiante" prefWidth="200" /> 
+                    <TableColumn fx:id="colMateria" text="Materia" prefWidth="200" />
+                    <TableColumn fx:id="colNota" text="Nota" prefWidth="100" />
+                </columns>
+            </TableView>
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="txtIdEstudiante" promptText="ID Estudiante" />
+                <TextField fx:id="txtNombreEstudiante" promptText="Nombre Estudiante" />
+                <TextField fx:id="txtMateria" promptText="Materia" />
+                <TextField fx:id="txtNota" promptText="Nota" />
+                <Button text="Agregar" onAction="#handleAgregar" /> 
+                <Button text="Editar" onAction="#handleEditar" /> 
+                <Button text="Eliminar" onAction="#handleEliminar" /> 
+            </HBox>
+        </VBox>
+    </center>
+    <bottom>
+        <Button text="Volver" onAction="#handleVolver" BorderPane.alignment="CENTER" style="-fx-padding: 10px;" />
+    </bottom>
+</BorderPane>
